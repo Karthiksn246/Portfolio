@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+
+    <style>
+        /* Sticky Navigation */
+body {
+    padding-top: 56px; /* Adjust based on navbar height */
+}
+
+.navbar .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar .nav-link:hover {
+    color: #f8f9fa !important;
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+        /* Custom styles for the About section */
+        #about {
+            background-image: url('images/about/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        #about h2 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        #about p {
+            font-size: 18px;
+        }
+
+       /* About Section Image and Name Styling */
+.about-info {
+    text-align: center;
+}
+
+.about-image {
+    margin-bottom: 15px; /* Adjust space between image and name */
+}
+
+.about-image img {
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    border-radius: 50%; /* Makes the image circular */
+}
+
+.about-info h3 {
+    margin-top: 10px; /* Adjust space between image and name */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: #ffffff; /* Adjust color as needed */
+}
+
+
+
+
+
+
+        /* Custom styles for the Internship section */
+        #internships {
+            background-image: url('images/internships/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        #internships .card {
+            background-color: rgba(40, 36, 36, 0.8); /* White background with transparency */
+        }
+
+        #internships .card-title,
+        #internships .card-text a {
+            color: #ffffff; /* Set text and link color inside the card to black */
+        }
+
+        #internships .card-text a {
+            text-decoration: none;
+        }
+
+        #internships .card-text a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+
+        /* Custom styles for the Projects section */
+        #projects {
+            background-image: url('images/projects/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        #projects .card {
+            background-color: rgba(25, 22, 22, 0.8); /* White background with transparency */
+        }
+
+        #projects .card-title,
+        #projects .card-text a {
+            color: #ffffff; /* Set text and link color inside the card to black */
+        }
+
+        #projects .card-text a {
+            text-decoration: none;
+        }
+
+        #projects .card-text a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+
+        /* Custom styles for the skills section */
+        #skills {
+            background-image: url('images/skills/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        #skills .card {
+            background-color: rgba(40, 36, 36, 0.8); /* White background with transparency */
+        }
+
+        #skills .card-title,
+        #skills .card-text a {
+            color: #000; /* Set text and link color inside the card to black */
+        }
+
+        #skills .card-text a {
+            text-decoration: none;
+        }
+
+        #skills .card-text a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+/* Custom styles for the certificates section */
+#certificate {
+            background-image: url('images/certificates/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        #certificate .card {
+            background-color: rgba(40, 36, 36, 0.8); /* White background with transparency */
+        }
+
+        #certificate .card-title,
+        #certificate .card-text a {
+            color: #000; /* Set text and link color inside the card to black */
+        }
+
+        #certificate .card-text a {
+            text-decoration: none;
+        }
+
+        #education .card-text a:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+        /* Custom styles for the education section */
+        #education {
+            background-image: url('images/education/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        #education .card {
+            background-color: rgba(40, 36, 36, 0.8); /* White background with transparency */
+        }
+
+        #education .card-title,
+        #education .card-text a {
+            color: #000; /* Set text and link color inside the card to black */
+        }
+
+        #education .card-text a {
+            text-decoration: none;
+        }
+
+        #education .card-text a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- About Section -->
+<section id="about">
+    <div class="container text-center">
+        <h2>ABOUT ME</h2>
+        <!-- Image and Name Section -->
+        <div class="about-info d-flex flex-column align-items-center">
+            <div class="about-image mb-3">
+                <img src="images/about/profile.jpg" alt="Karthik S" class="img-fluid rounded-circle">
+            </div>
+            <h3>Karthik S</h3> <!-- Replace with your actual name -->
+        </div>
+        <!-- Text Section -->
+        <p>
+            I am a Bachelor of Engineering graduate with specialization in Computer Science, eager to launch my career in the technology field.
+            With a strong foundation in both theoretical knowledge and practical experience,
+            I am passionate about leveraging my skills to contribute to innovative solutions and dynamic projects.
+        </p>
+        <p>
+            Throughout my academic journey, I actively participated in various projects and internships, where I honed my problem-solving abilities and gained hands-on experience in real-world scenarios.
+            These experiences have equipped me with the skills needed to thrive in the technology sector and address complex challenges effectively.
+        </p>
+        <p>
+            I am enthusiastic about starting my career in technology and am committed to continuous learning and professional growth. 
+            I look forward to contributing my skills and knowledge to a forward-thinking team and making a meaningful impact in the field.
+        </p>
+    </div>
+</section>
+
+
+
+
+
+    <!-- Internships Section -->
+    <section id="internships">
+        <div class="container">
+            <h2 class="text-center mb-4">INTERNSHIPS</h2>
+            <div class="row">
+                <!-- Internship 1 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/internships/internship1.jpg" class="card-img-top" alt="Internship 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Developer Intern</h5>
+                            <p>Exposys Data Labs | 21.08.2022 - 20.09.2022 </p>
+                            <p class="card-text">Developed a hotel booking website that allows users to book rooms from anywhere at any time.Through this project, I honed essential skills such as research, problem-solving, and time management. I also actively contributed to data collection and the management of the database system (DBMS), ensuring smooth functionality and user experience.</p>
+                            <p><a href="https://github.com/Karthiksn246/Hotel-management">Repository</a></p>
+                            <p> <a href="images\certificates\Karthik_Exposys[203].pdf"> Certificate</a> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Internship 2 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/internships/internship2.jpg" class="card-img-top" alt="Internship 2">
+                        <div class="card-body">
+                            <h5 class="card-title">CyberSecurity Intern</h5>
+                            <p>Prodigy InfoTech | 01.04.2024 – 31.04.2024</p>
+                            <p class="card-text">During this internship, I completed several projects focused on cryptography, packet sniffers, keyloggers, and password complexity checkers by using python programming language. This experience helped me understand security principles and develop essential tools for the cybersecurity field.</p>
+                            <p>Repositories:</p>
+                            <p>
+                                <a href="https://github.com/Karthiksn246/PRODIGY_CS_01">Task 1</a> | 
+                                <a href="https://github.com/Karthiksn246/PRODIGY_CS_02">Task 2</a> | 
+                                <a href="https://github.com/Karthiksn246/PRODIGY_CS_03">Task 3</a> | 
+                                <a href="https://github.com/Karthiksn246/PRODIGY_CS_04">Task 4</a> | 
+                                <a href="https://github.com/Karthiksn246/PRODIGY_CS_05">Task 5</a>
+                            </p>
+                            <p> <a href="images\certificates\Prodigy infotech.pdf"> Certificate</a> | <a href="images/certificates/Letter of Recommendation(prodigy infotech).pdf"> LOR </a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="text-center mb-4">PROJECTS</h2>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/projects/project1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Unusual Crowd Activity Detection</h5>
+                            <p class="card-text">This project involved analyzing crowd behavior in real-time to identify anomalies, ensuring public safety and efficient crowd management. I utilized my skills in Python, data analysis, network analysis, and problem-solving to implement detection algorithms and optimize system performance, contributing to a robust and reliable solution.</p>
+                            <p><a href="images\projects\full project report.pdf">Project Report</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/projects/project2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Penetration Testing On Metasploitable2</h5>
+                            <p class="card-text">This project aims to identify and exploit vulnerabilities on Metasploitable 2 which is an intentionally vulnerable virtual machine. Recommendations for mitigating identified vulnerabilities and enhancing the overall security of the system. Insights into the practical application of penetration testing methodologies and tools. Some of the used tools are NetDiscover, Nmap & msfconsole.</p>
+                            <p><a href="images\projects\PENETRATION TESTING REPORT OF METASPLOITABLE2.pdf">Project Report</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Skills Section -->
+<section id="skills" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">SKILLS</h2>
+        <div class="row text-center">
+            <!-- Skill 1 -->
+            <div class="col-md-3">
+                <img src="images/skills/python.png" alt="Python" class="mb-3" style="max-width: 200px;">
+                <h5>Python</h5>
+                <p>Proficient in writing efficient, scalable code and developing automation solutions.</p>
+            </div>
+            <!-- Skill 2 -->
+            <div class="col-md-3">
+                <img src="images/skills/sql.png" alt="Data Visualization" class="mb-3" style="max-width: 200px;">
+                <h5>MySQL</h5>
+                <p>Skilled in database design, management, and querying.</p>
+            </div>
+            <!-- Skill 3 -->
+            <div class="col-md-3">
+                <img src="images/skills/linux.jpeg" alt="SQL" class="mb-3" style="max-width: 200px;">
+                <h5>Linux Commands</h5>
+                <p>Competent in navigating and utilizing Linux systems for various tasks.</p>
+            </div>
+            <!-- Skill 4 -->
+            <div class="col-md-3">
+                <img src="images/skills/data analystics.jpeg" alt="Data Storytelling" class="mb-3" style="max-width: 200px;">
+                <h5>Data Analytics</h5>
+                <p>Proficient in analyzing data to extract actionable insights and drive decision-making.</p>
+            </div>
+            <!-- Skill 5 -->
+            <div class="col-md-3">
+                <img src="images/skills/ms office.jpeg" alt="Data Storytelling" class="mb-3" style="max-width: 200px;">
+                <h5>Communication & MS Office</h5>
+                <p>Strong communicator with experience in creating detailed reports and presentations using MS Office (Excel, Word, PPT).</p>
+            </div>
+            <!-- Skill 6 -->
+            <div class="col-md-3">
+                <img src="images/skills/network analysis.jpg" alt="Data Storytelling" class="mb-3" style="max-width: 200px;">
+                <h5>Network Analysis</h5>
+                <p>Experienced in monitoring, analyzing, and optimizing network performance.</p>
+            </div>
+            <!-- Skill 7 -->
+            <div class="col-md-3">
+                <img src="images/skills/data collection and cleaning.jpg" alt="Data Storytelling" class="mb-3" style="max-width: 200px;">
+                <h5>Data Collection & Cleaning</h5>
+                <p>I specialize in data collection and cleaning, ensuring accurate and reliable datasets for analysis.</p>
+            </div>
+            <!-- Skill 8 -->
+            <div class="col-md-3">
+                <img src="images/skills/risk analysis.png" alt="Data Storytelling" class="mb-3" style="max-width: 200px;">
+                <h5>Risk Analysis & Management</h5>
+                <p>Adept at identifying, assessing, and mitigating potential risks.</p>
+            </div>
+            <!-- Skill 9 -->
+            <div class="col-md-3">
+                <img src="images/skills/ethical kacking.jpg" alt="Data Storytelling" class="mb-3" style="max-width: 200px;">
+                <h5>Ethical Hackinng & Vulnerability Assessment</h5>
+                <p>Knowledgeable in identifying security vulnerabilities and implementing measures to safeguard systems.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Certificates Section -->
+<section id="certificate" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">CERTIFIED COURSES</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Certificate Item 1 -->
+                <div class="mb-4">
+                    <h4>Introduction To Cybersecurity</h4>
+                    <p class="text-muted">CISCO | 22.09.2023</p>
+                    <p><a href="images\certificates\Introduction_to_Cybersecurity_Badge20230922-28-yuo8iw.pdf" class="text-primary font-weight-bold">Certificate</a></p>
+                </div>
+                <!-- Certificate Item 2 -->
+                <div class="mb-4">
+                    <h4>Introduction To Ethical Hacking</h4>
+                    <p class="text-muted">Offenso Hackers Academy | 09.08.2023</p>
+                    <p><a href="images\certificates\introduction to ethical hacking.pdf" class="text-primary font-weight-bold">Certificate</a></p>
+                </div>
+                <!-- Certificate Item 3 -->
+                <div class="mb-4">
+                    <h4>Certified Penetration Tester</h4>
+                    <p class="text-muted">RedTeam Hackers Academy | 22.08.2023 - 17.01.2024</p>
+                    <p><a href="images\certificates\cpt_calicut_20.2.24-2.pdf" class="text-primary font-weight-bold">Certificate</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- Education Section -->
+<section id="education" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">EDUCATION</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Education Item 1 -->
+                <div class="mb-4">
+                    <h4>Bachelor of Engineering in Computer Science</h4>
+                    <p class="text-muted">Gopalan College Of Engineering & Management (VTU University), Bangalore, India | 2019 - 2023</p>
+                    <p>Graduated with honors, specialized in Computer Science, and completed a final year project on Unusual Crowd Activity Detection. Developed skills in Python, SQL, and Linux.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- Contact Me Section -->
+<section id="contact" class="py-5" style="background-color: #000;">
+    <div class="container text-center text-white">
+        <h2 class="mb-4">CONTACT ME</h2>
+        <div class="d-flex justify-content-center align-items-center mb-4">
+            <div class="offset-md-1">
+                <img src="icons/email.png" alt="Email" style="max-width: 24px;">
+                <span>karthiksn246@gmail.com</span>
+            </div>
+                <div class="offset-md-1">
+                <img src="icons/phone.png" alt="Phone" style="max-width: 24px;">
+                <span>+91 99955 398044</span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center align-items-center mb-4">
+            <div class="offset-md-1">
+                <a href="https://www.linkedin.com/in/karthik-s-97b181253/" >
+                    <img src="icons/linkedinn.jpeg" alt="LinkedIn" class="mb-2" style="max-width: 48px;">
+                    <p class="text-white">LinkedIn</p>
+                </a>
+            </div>
+            <div class="col-md-2 offset-md-1">
+                <a href="https://github.com/Karthiksn246/" >
+                    <img src="icons/github.png" alt="GitHub" class="mb-2" style="max-width: 48px;">
+                    <p class="text-white">GitHub</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">ABOUT ME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#internships">INTERNSHIPS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">PROJECTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">SKILLS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#certificate">CERTIFIED COURSES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">EDUCATION</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+</section>
+<section id="about">
+    <!-- About content -->
+</section>
+<section id="internships">
+    <!-- Internships content -->
+</section>
+<section id="projects">
+    <!-- Projects content -->
+</section>
+<section id="skills">
+    <!-- Skills content -->
+</section>
+<section id="certificate">
+    <!-- Certified Courses content -->
+</section>
+<section id="education">
+    <!-- Education content -->
+</section>
+<section id="contact">
+    <!-- Contact content -->
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
