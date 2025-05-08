@@ -1,652 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Karthik Portfolio</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-
-
-
-
-    <style>
-        /* Sticky Navigation */
-body {
-    padding-top: 56px; /* Adjust based on navbar height */
-}
-
-.navbar .nav-link {
-    color: #ffffff !important;
-}
-
-.navbar .nav-link:hover {
-    color: #f8f9fa !important;
-    text-decoration: underline;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-
-        /* Custom styles for the About section */
-        #about {
-            background-image: url('images/about/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fff;
-            padding: 60px 0;
-        }
-
-        #about h2 {
-            font-size: 36px;
-            font-weight: bold;
-        }
-
-        #about p {
-            font-size: 18px;
-        }
-
-       /* About Section Image and Name Styling */
-.about-info {
-    text-align: center;
-}
-
-.about-image {
-    margin-bottom: 15px; /* Adjust space between image and name */
-}
-
-.about-image img {
-    width: 150px; /* Adjust width as needed */
-    height: 150px; /* Adjust height as needed */
-    border-radius: 50%; /* Makes the image circular */
-}
-
-.about-info h3 {
-    margin-top: 10px; /* Adjust space between image and name */
-    font-size: 1.5rem; /* Adjust font size as needed */
-    color: #ffffff; /* Adjust color as needed */
-}
-
-.about-info h4 {
-    margin-top: 10px; /* Adjust space between image and name */
-    font-size: 1.5rem; /* Adjust font size as needed */
-    color: #ffffff; /* Adjust color as needed */
-}
-
-
-
-
-
-        /* Custom styles for the Internship section */
-        #internships {
-            background-image: url('images/internships/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fff;
-            padding: 60px 0;
-        }
-
-        #internships .card {
-            background-color: rgba(40, 36, 36, 0.8); /* White background with transparency */
-        }
-
-        #internships .card-title,
-        #internships .card-text a {
-            color: #ffffff; /* Set text and link color inside the card to black */
-        }
-
-        #internships .card-text a {
-            text-decoration: none;
-        }
-
-        #internships .card-text a:hover {
-            text-decoration: underline;
-        }
-
-
-
-
-
-
-        /* Custom styles for the Projects section */
-        #projects {
-            background-image: url('images/projects/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fff;
-            padding: 60px 0;
-        }
-
-        #projects .card {
-            background-color: rgba(25, 22, 22, 0.8); /* White background with transparency */
-        }
-
-        #projects .card-title,
-        #projects .card-text a {
-            color: #ffffff; /* Set text and link color inside the card to black */
-        }
-
-        #projects .card-text a {
-            text-decoration: none;
-        }
-
-        #projects .card-text a:hover {
-            text-decoration: underline;
-        }
-
-
-
-
-
-
-        /* Custom styles for the skills section */
-        #skills {
-            background-image: url('images/skills/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fff;
-            padding: 60px 0;
-        }
-
-        #skills .card {
-            background-color: rgba(40, 36, 36, 0.8); /* White background with transparency */
-        }
-
-        #skills .card-title,
-        #skills .card-text a {
-            color: #000; /* Set text and link color inside the card to black */
-        }
-
-        #skills .card-text a {
-            text-decoration: none;
-        }
-
-        #skills .card-text a:hover {
-            text-decoration: underline;
-        }
-
-
-
-
-
-/* Custom styles for the certificates section */
-#certificate {
-            background-image: url('images/certificates/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fff;
-            padding: 60px 0;
-        }
-
-        #certificate .card {
-            background-color: rgba(40, 36, 36, 0.8); /* White background with transparency */
-        }
-
-        #certificate .card-title,
-        #certificate .card-text a {
-            color: #000; /* Set text and link color inside the card to black */
-        }
-
-        #certificate .card-text a {
-            text-decoration: none;
-        }
-
-        #education .card-text a:hover {
-            text-decoration: underline;
-        }
-
-
-
-
-
-        /* Custom styles for the education section */
-        #education {
-            background-image: url('images/education/background.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: #fff;
-            padding: 60px 0;
-        }
-
-        #education .card {
-            background-color: rgba(40, 36, 36, 0.8); /* White background with transparency */
-        }
-
-        #education .card-title,
-        #education .card-text a {
-            color: #000; /* Set text and link color inside the card to black */
-        }
-
-        #education .card-text a {
-            text-decoration: none;
-        }
-
-        #education .card-text a:hover {
-            text-decoration: underline;
-        }
-
-    </style>
 </head>
-<body>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#portfolio">Skills</a></li>
+          <li><a href="#services">Work Experience</a></li>
+          <li><a href="#testimonials">Education & Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Karthik S<br></h2>
+        <p>I'm <span class="typed" data-typed-items="Developer, Freelancer, Artist">Developer</span></p>
+      </div>
+
+    </section><!-- /Hero Section -->
+
     <!-- About Section -->
-<section id="about">
-    <div class="container text-center">
-        <h2>ABOUT ME</h2>
-        <div class="about-info d-flex flex-column align-items-center">
-            <div class="about-image mb-3">
-                <img src="images/about/profile.jpg" alt="Karthik S" class="img-fluid rounded-circle">
-            </div>
-            <h3>Karthik S</h3>
-            <p></p>
-            <h4>Tech Enthusiast</h4>
-        </div>
-        <p>
-          I am a passionate and driven tech enthusiast with a strong foundation in programming,
-            database management, networking, and data analytics. With expertise in Python, HTML, CSS, JavaScript, and Data Structures & Algorithms,
-            I enjoy building efficient and scalable solutions.
-        </p>
-        <p>
-            My experience in MySQL, Microsoft Azure, and database management allows me to design and optimize data-driven systems. 
-            Additionally, I leverage Tableau, Excel, and data cleaning techniques for insightful data analytics and visualization.
-        </p>
-        <p>
-            With a solid understanding of networking, cybersecurity, and penetration testing, I am committed to building secure and robust systems.
-            Proficient in Linux shell scripting and Windows administration, I am comfortable working across different environments.
-        </p>
-         <p>
-            Beyond technical skills, I excel in problem-solving, project management, and communication, ensuring that I deliver high-quality results in every project. My goal is to continuously learn, innovate, and contribute to impactful technology solutions.
-        </p>
-    </div>
-</section>
+    <section id="about" class="about section">
 
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
 
+      </div><!-- End Section Title -->
 
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-
-    <!-- Internships Section -->
-    <section id="internships">
-        <div class="container">
-            <h2 class="text-center mb-4">INTERNSHIPS</h2>
-            <div class="row">
-                <!-- Internship 1 -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="images/internships/internship1.jpg" class="card-img-top" alt="Internship 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Developer Intern</h5>
-                            <p>Exposys Data Labs</p>
-                            <p>21.08.2022 - 20.09.2022</p>
-                            <p class="card-text">Developed a hotel booking website that allows users to book rooms from anywhere at any time.Through this project, I honed essential skills such as research and SQL for managing databases.
-                                Gained experience in data storage and retrieval using SQL, optimizing database queries for faster data access, and handling user data securely.</p>
-                            <p><a href="https://github.com/Karthiksn246/Hotel-management">Repository</a></p>
-                            <p> <a href="images\certificates\Karthik_Exposys[203].pdf"> Certificate</a> </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Internship 2 -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="images/internships/internship2.jpg" class="card-img-top" alt="Internship 2">
-                        <div class="card-body">
-                            <h5 class="card-title">CyberSecurity Intern</h5>
-                            <p>Prodigy InfoTech</p>
-                            <p>01.04.2024 - 31.04.2024</p>
-                            <p class="card-text">Developed tools using Python for data monitoring and analysis, including packet sniffers and password complexity checkers. 
-                                Built a foundational understanding of data security and risk analysis, focusing on data integrity and security—key elements for handling data responsibly in analysis roles.</p>
-                            <p>Repositories:</p>
-                            <p>
-                                <a href="https://github.com/Karthiksn246/PRODIGY_CS_01">Task 1</a> | 
-                                <a href="https://github.com/Karthiksn246/PRODIGY_CS_02">Task 2</a> | 
-                                <a href="https://github.com/Karthiksn246/PRODIGY_CS_03">Task 3</a> | 
-                                <a href="https://github.com/Karthiksn246/PRODIGY_CS_04">Task 4</a> | 
-                                <a href="https://github.com/Karthiksn246/PRODIGY_CS_05">Task 5</a>
-                            </p>
-                            <p> <a href="images\certificates\Prodigy infotech.pdf"> Certificate</a> | <a href="images/certificates/Letter of Recommendation(prodigy infotech).pdf"> LOR </a> </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="text-center mb-4">PROJECTS</h2>
-            <div class="row">
-                <!-- Project 1 -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="images/projects/project1.jpg" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Unusual Crowd Activity Detection</h5>
-                            <p class="card-text">This project involved analyzing crowd behavior in real-time to identify anomalies, ensuring public safety and efficient crowd management. I utilized my skills in Python, data analysis, network analysis, and problem-solving to implement detection algorithms and optimize system performance, contributing to a robust and reliable solution.</p>
-                            <p><a href="images\projects\full project report.pdf">Project Report</a></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 2 -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="images/projects/mysql.png" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Data Cleaning - MySQL</h5>
-                            <p class="card-text">In this project, I utilized MySQL to clean a dataset related to layoffs. The process involved removing duplicate entries to ensure data integrity, standardizing the data for consistency, eliminating null or blank values to maintain accuracy, and removing unnecessary columns to streamline the dataset. This work resulted in a clean, reliable dataset ready for further analyis</p>
-                            <p><a href="https://github.com/Karthiksn246/Data-cleaning">Project Report</a></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="images/projects/excel.jpeg" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Data Cleaning & Visualization - Excel</h5>
-                            <p class="card-text">This project involves cleaning a bike sales dataset and creating an insightful dashboard visualization using Excel. The objective of this project is to transform raw sales data into a clean, standardized format and generate visual insights to aid decision-making.</p>
-                            <p><a href="https://github.com/Karthiksn246/Excel-Project-Datacleaning">Project Report</a></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 4 -->
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="images/projects/tableau.jpeg" class="card-img-top" alt="Project 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Data Visualization - Tableau</h5>
-                            <p class="card-text">In this project, I used Tableau to analyze and visualize Airbnb data, focusing on key metrics like booking trends, pricing patterns, and availability. 
-                                By creating interactive dashboards, I provided insights into customer preferences and booking behaviors, which can help in strategic decision-making for property management and marketing. 
-                                This project improved my data visualization skills and my ability to interpret complex data into clear, actionable visuals.</p>
-                            <p><a href="https://github.com/Karthiksn246/tableau_AirBnB">Project Report</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-    <!-- Skills Section -->
-<section id="skills" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">SKILLS</h2>
-        
-        <!-- Programming & Development -->
-        <h3 class="text-center mb-4">Programming & Development</h3>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <img src="images/skills/python.png" class="mb-3" style="max-width: 200px;">
-                <h5>Python</h5>
-                <p>Proficient in writing clean and efficient code.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/html.jpeg" class="mb-3" style="max-width: 200px;">
-                <h5>HTML</h5>
-                <p>Skilled in structuring and designing web pages with clean, semantic markup.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/css.jpeg" class="mb-3" style="max-width: 200px;">
-                <h5>CSS</h5>
-                <p>Skilled in designing responsive and visually appealing user interfaces.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/javascript.jpeg" class="mb-3" style="max-width: 200px;">
-                <h5>JavaScript</h5>
-                <p>Skilled in writing efficient and interactive scripts for web development</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/ds.jpeg" class="mb-3" style="max-width: 200px;">
-                <h5>Data Structures & Algorithms</h5>
-                <p>Strong understanding of fundamental data structures and algorithms, enabling efficient problem-solving and performance optimization in software development.</p>
-            </div>
-        </div>
-        
-        <!-- Database & Cloud Technologies: -->
-        <h3 class="text-center mt-5 mb-4">Database & Cloud Technologies:</h3>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <img src="images/skills/sql.png" class="mb-3" style="max-width: 200px;">
-                <h5>MySQL</h5>
-                <p>Skilled in database design, management, and querying.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/dbm.jpeg" class="mb-3" style="max-width: 200px;">
-                <h5>Database Management</h5>
-                <p>Skilled in designing, optimizing, and managing relational databases using MySQL. 
-                    Experienced in writing complex queries, indexing for performance, and implementing stored procedures for efficient data handling.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/azure.png" class="mb-3" style="max-width: 200px;">
-                <h5>Microsoft Azure</h5>
-                <p>Proficient in using Microsoft Azure for cloud computing, including deployment, management, and optimization of cloud resources.</p>
-            </div>
-        </div>
-        
-        <!-- Data Analytics & Visualization -->
-        <h3 class="text-center mt-5 mb-4">Data Analytics & Visualization</h3>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <img src="images/skills/data cleaning.jpeg" class="mb-3" style="max-width: 200px;">
-                <h5>Data Cleaning</h5>
-                <p>Skilled in data cleaning and preprocessing using MySQL and Excel, including handling missing values, removing duplicates, normalizing data, and ensuring data consistency for analysis.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/Data Vizualisation.png" class="mb-3" style="max-width: 200px;">
-                <h5>Tableau</h5>
-                <p>Proficient in using Tableau to create interactive and insightful dashboards, leveraging data visualization techniques for effective analysis and decision-making.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/excel.jpeg" class="mb-3" style="max-width: 200px;">
-                <h5>Excel</h5>
-                <p>Proficient in data processing and dashboard creation using Excel, including Pivot Tables, XLOOKUP, and other advanced functions for data analysis and visualization.</p>
-            </div>
-        </div>
-
-
-        <!-- Networking & Security -->
-        <h3 class="text-center mt-5 mb-4">Networking & Security</h3>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <img src="images/skills/network analysis.jpg" class="mb-3" style="max-width: 200px;">
-                <h5>Networking Fundamentals</h5>
-                <p>Knowledgeable in network fundamentals, including networking protocols, IP addressing, subnetting, and network security principles.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/cybersecurity.jpeg" class="mb-3" style="max-width: 200px;">
-                <h5>Cybersecurity</h5>
-                <p>network security, vulnerability assessment, and encryption techniques.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/ethical kacking.jpg" class="mb-3" style="max-width: 200px;">
-                <h5>Penetration Testing</h5>
-                <p>Experienced with tools such as Nmap, Nessus, Burp Suite, and Metasploitable for scanning, exploitation, and security testing.</p>
-            </div>
-        </div>
-
-        <!-- Operating Systems -->
-        <h3 class="text-center mt-5 mb-4">Operating Systems</h3>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <img src="images/skills/linux.jpeg" class="mb-3" style="max-width: 200px;">
-                <h5>Linux Commands & Shell Scripting</h5>
-                <p>Proficient in Linux commands and shell scripting, with experience using Kali Linux in a virtual machine for penetration testing and security assessments.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="images/skills/windows.jpeg" class="mb-3" style="max-width: 200px;">
-                <h5>Windows</h5>
-                <p>Proficient in using Windows OS for system administration, software management, and troubleshooting.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<!-- Certificates Section -->
-<section id="certificate" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">CERTIFIED COURSES</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <!-- Certificate Item 1 -->
-                <div class="mb-4">
-                    <h4>Certified Penetration Tester</h4>
-                    <p class="text-muted">RedTeam Hackers Academy | 22.08.2023 - 17.01.2024</p>
-                    <p><a href="images\certificates\cpt_calicut_20.2.24-2.pdf" class="text-primary font-weight-bold">Certificate</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- Certificates Section -->
-<section id="certificate" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">CERTIFICATES</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <!-- Certificate Item 1 -->
-                <div class="mb-4">
-                    <h4>Certified Penetration Tester</h4>
-                    <p class="text-muted">RedTeam Hackers Academy | 22.08.2023 - 17.01.2024</p>
-                    <p><a href="images\certificates\cpt_calicut_20.2.24-2.pdf" class="text-primary font-weight-bold">Certificate</a></p>
-                </div>
-                <!-- Certificate Item 2 -->
-                <div class="mb-4">
-                    <h4>Introduction to Cybersecurity</h4>
-                    <p class="text-muted">CISCO | September 22 2023</p>
-                    <p><a href="images\certificates\Introduction_to_Cybersecurity.pdf" class="text-primary font-weight-bold">Certificate</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-    <!-- Education Section -->
-<section id="education" class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">EDUCATION</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <!-- Education Item 1 -->
-                <div class="mb-4">
-                    <h4>Bachelor of Engineering in Computer Science</h4>
-                    <p class="text-muted">Gopalan College Of Engineering & Management (VTU University), Bangalore, India | 2019 - 2023</p>
-                    <p>Graduated with honors, specialized in Computer Science, and completed a final year project on Unusual Crowd Activity Detection. Developed skills in Python, SQL, and Linux.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-    <!-- Contact Me Section -->
-<section id="contact" class="py-5" style="background-color: #000;">
-    <div class="container text-center text-white">
-        <h2 class="mb-4">CONTACT ME</h2>
-        <div class="d-flex justify-content-center align-items-center mb-4">
-            <div class="offset-md-1">
-                <img src="icons/email.png" alt="Email" style="max-width: 24px;">
-                <span>karthiksn246@gmail.com</span>
-            </div>
-                <div class="offset-md-1">
-                <img src="icons/phone.png" alt="Phone" style="max-width: 24px;">
-                <span>+91 99955 398044</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center align-items-center mb-4">
-            <div class="offset-md-1">
-                <a href="https://www.linkedin.com/in/karthik-s-97b181253/" >
-                    <img src="icons/linkedinn.jpeg" alt="LinkedIn" class="mb-2" style="max-width: 48px;">
-                    <p class="text-white">LinkedIn</p>
-                </a>
-            </div>
-            <div class="col-md-2 offset-md-1">
-                <a href="https://github.com/Karthiksn246/" >
-                    <img src="icons/github.png" alt="GitHub" class="mb-2" style="max-width: 48px;">
-                    <p class="text-white">GitHub</p>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-    
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">My Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">ABOUT ME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#internships">INTERNSHIPS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">PROJECTS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">SKILLS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#certificate">CERTIFIED COURSES</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">EDUCATION</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
+        <div class="row gy-4 justify-content-between">
+          <div class="col-lg-4 profile-img align-self-start">
+            <img src="assets/img/me.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-7 content">
+            <h3> I find joy in building robust and scalable solutions and am driven to learn new technologies to develop effective solutions.</h3>
+            <ul>
+              <li><i class="bi bi-check2-all"></i> <span>Passionate about leveraging technology to solve complex problems and drive innovation.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>A quick learner with strong analytical and problem-solving skills.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>I am eager to build a career in tech and take on leadership roles.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>My strong foundation in programming languages, data structures, and database management is coupled with a dedication to writing clean, efficient, and elegant code.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Always curious and proactive in exploring new tools, frameworks, and development practices.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Committed to continuous learning and professional development.</span></li>
             </ul>
+          </div>
         </div>
-    </div>
-</nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      </div>
+
+    </section><!-- /About Section -->
+
+
+        <!-- Project Section -->
+        <section id="projects" class="project section">
+
+          <!-- Section Title -->
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Projects</h2>
+          </div><!-- End Section Title -->
+    
+          <div class="container">
+    
+            <div class="row gy-4">
+
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="pricing-item featured">
+                  <img src="assets/img/projects/travel.jpg" class="img-fluid" alt="">
+                  <p>Jan-2025 to Active</p>
+                  <h3>Travel Guide Website</h3>
+                  <p class="description" style="text-align: justify;">This is a comprehensive World Travel Guide website designed to help users plan and book their entire trip in one place. Built using HTML, CSS, and JavaScript for the frontend, and Python with MySQL for backend functionality, this platform will serve as an all-in-one travel assistant. The website allows travelers to: Discover categorized tourist destinations based on type (nature, adventure, heritage, etc.) and location. Book transportation and accommodations directly through the platform. Access travel planning tools suited for all types of travelers, from solo backpackers to family vacationers. The frontend development is nearly complete, focusing on responsive design and user-friendly navigation. Backend features, including booking systems and dynamic content loading, are currently in progress.</p>
+                  <a href="assets/img/projects/process.png" class="cta-btn">Project_link</a>
+                  <p></p>
+                </div>
+              </div><!-- End Project Item -->
+    
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="pricing-item">
+                  <img src="assets/img/projects/car.png" class="img-fluid" alt="">
+                  <h3>Rent-A-Car Website</h3>
+                  <p>Nav-2024</p>
+                  <p class="description" style="text-align: justify;">It's a responsive and user-friendly car rental website using HTML, CSS, and JavaScript. The platform allows users to browse and book premium cars for rent with ease. Key features include: A modern and attractive UI showcasing various premium car models. Interactive booking forms for selecting rental dates and car preferences. Responsive layout for a seamless experience across all devices. JavaScript-powered dynamic elements to enhance user interaction. This project demonstrates my front-end development skills and focuses on creating a smooth and visually appealing customer experience for luxury car rentals.</p>
+                  <a href="https://github.com/Karthiksn246/rent_a_car" class="cta-btn">Project_link</a>
+                  <p></p>
+                </div>
+              </div><!-- End Project Item -->
+
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="pricing-item">
+                  <img src="assets/img/projects/project1.jpg" class="img-fluid" alt="">
+                  <h3>Unusual Crowd Activity Detection</h3>
+                  <p>College Project(2023)</p>
+                  <p class="description" style="text-align: justify;">This project focused on real-time analysis of crowd behavior to detect anomalies and support public safety through efficient crowd management. Using Convolutional Neural Networks (CNNs) and OpenCV, we developed a deep learning-based system capable of identifying unusual patterns in crowd movement. Implemented and trained deep learning models for behavior detection using Python and CNN. Applied computer vision techniques with OpenCV for real-time video processing. This project highlights my skills in AI-driven problem solving, data analysis, and the practical application of machine learning to real-world safety challenges.</p>
+                  <a href="assets/img/projects/full project report.pdf" class="cta-btn">Project_link</a>
+                  <p></p>
+                </div>
+              </div><!-- End Project Item -->
+
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="pricing-item">
+                  <img src="assets/img/projects/mysql.jpg" class="img-fluid" alt="">
+                  <h3>Data Cleaning - MySQL</h3>
+                  <p>Sept-2024</p>
+                  <p class="description" style="text-align: justify;">In this project, I utilized MySQL to clean a dataset related to layoffs. The process involved removing duplicate entries to ensure data integrity, standardizing the data for consistency, eliminating null or blank values to maintain accuracy, and removing unnecessary columns to streamline the dataset. This work resulted in a clean, reliable dataset ready for further analyis.</p>
+                  <a href="https://github.com/Karthiksn246/MySQl-Project-DataCleaning" class="cta-btn">Project_link</a>
+                  <p></p>
+                </div>
+              </div><!-- End Project Item -->
+
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="pricing-item">
+                  <img src="assets/img/projects/tableau.jpg" class="img-fluid" alt="">
+                  <h3>Data Visualization - Tableau</h3>
+                  <p>Aug-2024</p>
+                  <p class="description" style="text-align: justify;">In this project, I used Tableau to analyze and visualize Airbnb data, focusing on key metrics like booking trends, pricing patterns, and availability. By creating interactive dashboards, I provided insights into customer preferences and booking behaviors, which can help in strategic decision-making for property management and marketing. This project improved my data visualization skills and my ability to interpret complex data into clear, actionable visuals.</p>
+                  <a href="https://github.com/Karthiksn246/tableau_AirBnB" class="cta-btn">Project_link</a>
+                  <p></p>
+                </div>
+              </div><!-- End Project Item -->
+
+              <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="pricing-item">
+                  <img src="assets/img/projects/excel.jpg" class="img-fluid" alt="">
+                  <h3>Data Cleaning & Visualization - Excel</h3>
+                  <p>Jun-2024</p>
+                  <p class="description" style="text-align: justify;">This project involves cleaning a bike sales dataset and creating an insightful dashboard visualization using Excel. The objective of this project is to transform raw sales data into a clean, standardized format and generate visual insights to aid decision-making.</p>
+                  <a href="https://github.com/Karthiksn246/Excel-Project-Datacleaning" class="cta-btn">Project_link</a>
+                  <p></p>
+                </div>
+              </div><!-- End project Item -->
+    
+            </div>
+    
+          </div>
+    
+        </section><!-- /Project Section -->
+
+
+
+    <!-- skills Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-language">Programming Languages</li>
+            <li data-filter=".filter-database">Databases</li>
+            <li data-filter=".filter-cloud">Cloud & Version-Control</li>
+            <li data-filter=".filter-analytics">Data Analytics & Visualization</li>
+            <li data-filter=".filter-soft">Soft-skills</li>
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-language">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/python.jpg" width=1024 height=768 class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Python</h4>
+                  <p>Proficient in writing clean and efficient code.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-language">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/html.jpg" width=1024 height=768 class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>HTML5</h4>
+                  <p>Skilled in structuring and designing web pages with clean, semantic markup.</p>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-language">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/css.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>CSS</h4>
+                  <p>Skilled in designing responsive and visually appealing user interfaces.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-language">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/js.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>JavaScript</h4>
+                  <p>Skilled in writing efficient and interactive scripts for web development.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-database">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/mysql.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>MySQL</h4>
+                  <p>Skilled in database design, management, and querying.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-database">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/postgreSQL.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>PostgreSQL</h4>
+                  <p>Proficient in writing clean and efficient PostgreSQL queries.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-database">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/database.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Database Management</h4>
+                  <p>Skilled in managing relational databases and implementing stored procedures for efficient data handling.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-cloud">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/aws.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>AWS</h4>
+                  <p>Skilled in deploying and managing web applications using AWS services.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-cloud">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/git.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Git & Github</h4>
+                  <p>Experienced in using Git and GitHub for version control, collaboration, and managing codebases efficiently.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-analytics">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/excel.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Excel</h4>
+                  <p>Proficient in data processing and dashboard creation using Excel, including Pivot Tables, XLOOKUP, and other advanced functions for data analysis and visualization.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-analytics">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/tableau.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Tableau</h4>
+                  <p>Proficient in using Tableau to create interactive and insightful dashboards, leveraging data visualization techniques for effective analysis and decision-making.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-soft">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/problem.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Problem-Solving</h4>
+                  <p>Strong problem-solving skills with a passion for debugging, optimizing code, and building efficient solutions</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+            
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-soft">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/Project.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Project Management</h4>
+                  <p>Skilled in project management, task planning, and coordinating team efforts to deliver successful outcomes.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-soft">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/communication.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Communication</h4>
+                  <p>Strong communication skills, enabling effective collaboration, clear documentation, and confident presentations.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-item isotope-item filter-soft">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/time.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Time Management</h4>
+                  <p>Excellent time management skills with the ability to prioritize tasks and meet deadlines effectively.</p>
+                  </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+
+    <!-- work experiences Section -->
+    <section id="services" class="services section">
+
+      <!-- work Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Work Experiences</h2>
+        <p>These internship experiences allowed me to cultivate project management skills and expand my technical expertise. These roles were instrumental in my professional development.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+            <div>
+              <h4 class="title">Web Developer Intern</h4>
+              <p>Exposys Data Labs</p>
+              <p>21.08.2022 - 20.09.2022</p>
+              <p class="description">Created a hotel booking website with remote, 24/7 booking capabilities. This project resulted in the development of key skills in research, SQL (for efficient and secure database management), and front-end technologies (HTML, CSS, and JavaScript).</p>
+              <p><a href="https://github.com/Karthiksn246/Hotel-management">Repository</a></p>
+              <p><a href="assets/img/work/Karthik_Exposys[203].pdf">Certificate</a></p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+            <div>
+              <h4 class="title">CyberSecurity Intern</h4>
+              <p>Prodigy InfoTech</p>
+              <p>01.04.2024 - 31.04.2024</p>
+              <p class="description">Developed tools using Python for data monitoring and analysis, including packet sniffers and password complexity checkers. Built a foundational understanding of data security and risk analysis, focusing on data integrity and security—key elements for handling data responsibly in analysis roles.</p>
+              <p>Repositories:</p>
+              <p>
+                <a href="https://github.com/Karthiksn246/PRODIGY_CS_01">Task1</a>|
+                <a href="https://github.com/Karthiksn246/PRODIGY_CS_02">Task2</a>|
+                <a href="https://github.com/Karthiksn246/PRODIGY_CS_03">Task3</a>|
+                <a href="https://github.com/Karthiksn246/PRODIGY_CS_04">Task4</a>|
+                <a href="https://github.com/Karthiksn246/PRODIGY_CS_05">Task5</a>
+              </p>
+              <p><a href="assets/img/work/Prodigy infotech.pdf">Certificate</a></p>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Education & Certificates</h2>
+        <p>My credentials include a B.E. in Computer Science from Visvesvaraya Technological University and a Certified Penetration Tester certification.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 15000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>B.E Computer Science</h3>
+                <h4>Gopalan College Of Engineering & Management (VTU University), Bangalore, India | 2019 - 2023</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>During my honors graduation in Computer Science, I completed a final year project on Unusual Crowd Activity Detection. This project, along with my coursework, enabled me to develop strong technical skills and build a solid foundation in fundamental technologies.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.png" class="testimonial-img" alt="">
+                <h3>Certified Penetration Tester</h3>
+                <h4>RedTeam Hackers Academy | 22.08.2023 - 17.02.2024</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Through this ethical hacking course, I gained valuable knowledge for navigating the digital world securely and built a strong skillset in Linux command and shell scripting.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                  <p><a href="assets/img/testimonials/cpt_calicut_20.2.24-2.pdf">Certificate</a></p>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Introduction to Cybersecurity</h3>
+                <h4>CISCO | September 22 2023</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The cybersecurity course equipped me with the skills to identify and mitigate digital threats and attacks, and to implement robust security measures.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                  <p><a href="assets/img/testimonials/Introduction_to_Cybersecurity.pdf">Certificate</a></p>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>I welcome you to connect with me at your convenience using the following contact information</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="info-wrap" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5">
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Calicut, Kerala, India,(pin:673508)</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call<br></h3>
+                  <p>+91 99955 39804</p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="col-lg-4">
+              <div class="info-item d-flex align-items-center">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p><a href="mailto:karthiksn246@gmail.com">karthiksn246@gmail.com</a></p>
+                </div>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <h3 class="sitename">Digital Platforms</h3>
+      <p>Feel free to explore my LinkedIn and GitHub profiles to see more about my background and some of the projects I've worked on</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/Karthiksn246/"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/karthik-s-97b181253/"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
